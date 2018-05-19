@@ -1,2 +1,2 @@
-# Jena Scala
-WIP Scala wrapper around Apache Jena
+# Jena-Scala
+Scala wrapper around Apache Jena (WIP)
