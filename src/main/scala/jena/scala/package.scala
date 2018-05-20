@@ -1,10 +1,11 @@
 package jena
 
-import org.apache.jena.rdf.model
 import org.apache.jena.query
+import org.apache.jena.rdf.model
 import org.apache.jena.sparql.core
 
 package object scala {
+  type AnonId = model.AnonId
   type Dataset = query.Dataset
   type Literal = model.Literal
   type Model = model.Model

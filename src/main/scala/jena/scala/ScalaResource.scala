@@ -1,6 +1,11 @@
 package jena.scala
 
 import org.apache.jena.datatypes.RDFDatatype
+import org.apache.jena.rdf.model.{ResourceFactory => RF}
+
+object ScalaResource {
+  def apply(uri: String): Resource = RF.createResource(uri)
+}
 
 case class ScalaResource(resource: Resource) {
 
