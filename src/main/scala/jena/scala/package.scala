@@ -15,6 +15,14 @@ package object scala {
   type Resource = model.Resource
   type Statement = model.Statement
 
+  implicit class AnonIdAsScala(m: AnonId) {
+    def asScala = ScalaAnonId(m)
+  }
+
+  implicit class AnonIdAsJava(m: ScalaAnonId) {
+    def asJava = m.anonId
+  }
+
   implicit class DatasetAsScala(m: Dataset) {
     def asScala = ScalaDataset(m)
   }

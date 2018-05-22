@@ -11,6 +11,7 @@ class LiteralSpec extends WordSpec with Matchers {
 
   "literal" can {
     "be instantiated like a case class" in {
+
       val o: Literal = ScalaLiteral("object")
       o.getLexicalForm shouldBe "object"
 
@@ -21,6 +22,8 @@ class LiteralSpec extends WordSpec with Matchers {
 
       val o4: Literal = RF.createTypedLiteral("1", XSDDatatype.XSDinteger)
       (o3 equals o4) shouldBe true
+      (o3 == o4) shouldBe true
+      (o3.asScala == o4.asScala) shouldBe true
     }
   }
 
