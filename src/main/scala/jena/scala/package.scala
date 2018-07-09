@@ -20,7 +20,7 @@ package object scala {
   }
 
   implicit class AnonIdAsJava(m: ScalaAnonId) {
-    def asJava = m.anonId
+    def asJava: AnonId = m.anonId
   }
 
   implicit class DatasetAsScala(m: Dataset) {
@@ -28,7 +28,7 @@ package object scala {
   }
 
   implicit class DatasetAsJava(m: ScalaDataset) {
-    def asJava = m.dataset
+    def asJava: Dataset = m.dataset
   }
 
   implicit class LiteralAsScala(m: Literal) {
@@ -36,7 +36,7 @@ package object scala {
   }
 
   implicit class LiteralAsJava(m: ScalaLiteral) {
-    def asJava = m.literal
+    def asJava: Literal = m.literal
   }
 
   implicit class ModelAsScala(m: Model) {
@@ -44,7 +44,7 @@ package object scala {
   }
 
   implicit class ModelAsJava(m: ScalaModel) {
-    def asJava = m.model
+    def asJava: Model = m.model
   }
 
   implicit class PropertyAsScala(m: Property) {
@@ -52,7 +52,7 @@ package object scala {
   }
 
   implicit class PropertyAsJava(m: ScalaProperty) {
-    def asJava = m.property
+    def asJava: Property = m.property
   }
 
   implicit class QuadAsScala(m: Quad) {
@@ -60,7 +60,7 @@ package object scala {
   }
 
   implicit class QuadAsJava(m: ScalaQuad) {
-    def asJava = m.quad
+    def asJava: Quad = m.quad
   }
 
   implicit class RDFNodeAsScala(m: RDFNode) {
@@ -68,7 +68,7 @@ package object scala {
   }
 
   implicit class RDFNodeAsJava(m: ScalaRDFNode) {
-    def asJava = m.rdfNode
+    def asJava: RDFNode = m.rdfNode
   }
 
   implicit class ResourceAsScala(m: Resource) {
@@ -76,7 +76,7 @@ package object scala {
   }
 
   implicit class ResourceAsJava(m: ScalaResource) {
-    def asJava = m.resource
+    def asJava: Resource = m.resource
   }
 
   implicit class StatementAsScala(m: Statement) {
@@ -84,7 +84,7 @@ package object scala {
   }
 
   implicit class StatementAsJava(m: ScalaStatement) {
-    def asJava = m.statement
+    def asJava: Statement = m.statement
   }
 
 }

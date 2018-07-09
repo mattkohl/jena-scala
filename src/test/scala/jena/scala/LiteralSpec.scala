@@ -25,6 +25,17 @@ class LiteralSpec extends WordSpec with Matchers {
       (o3 == o4) shouldBe true
       (o3.asScala == o4.asScala) shouldBe true
     }
+
+    "instantiate other XML datatypes conveniently" in {
+      val o: Literal = ScalaLiteral(true)
+      assert(o == RF.createTypedLiteral("true", XSDDatatype.XSDboolean))
+
+      val o2: Literal = ScalaLiteral(2.0)
+      assert(o2 == RF.createTypedLiteral("2.0", XSDDatatype.XSDdouble))
+
+      val o3: Literal = ScalaLiteral(1)
+      assert(o3 == RF.createTypedLiteral("1", XSDDatatype.XSDinteger))
+    }
   }
 
 }
